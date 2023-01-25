@@ -253,68 +253,32 @@ h1{
 }
 
 /*Percentages*/
-.node span::before{
-    content:"80%";
-}
-.node .percentage-bar{
-    width: 80%;
-}
+.node span::before{ content:"80%"; }
+.node .percentage-bar{ width: 80%; }
 
-.deno span::before{
-    content:"60%";
-}
-.deno .percentage-bar{
-    width: 60%;
-}
+.deno span::before{ content:"60%"; }
+.deno .percentage-bar{ width: 60%; }
 
-.jquery span::before{
-    content:"80%";
-}
-.jquery .percentage-bar{
-    width: 80%;
-}
+.jquery span::before{ content:"80%"; }
+.jquery .percentage-bar{ width: 80%; }
 
-.react span::before{
-    content:"50%";
-}
-.react .percentage-bar{
-    width: 50%;
-}
+.react span::before{ content:"50%"; }
+.react .percentage-bar{ width: 50%; }
 
-.fresh span::before{
-    content:"60%";
-}
-.fresh .percentage-bar{
-    width: 60%;
-}
+.fresh span::before{ content:"60%"; }
+.fresh .percentage-bar{ width: 60%; }
 
-.docker span::before{
-    content:"40%";
-}
-.docker .percentage-bar{
-    width: 40%;
-}
+.docker span::before{ content:"40%"; }
+.docker .percentage-bar{ width: 40%; }
 
-.ghost span::before{
-    content:"70%";
-}
-.ghost .percentage-bar{
-    width: 70%;
-}
+.ghost span::before{ content:"70%"; }
+.ghost .percentage-bar{ width: 70%; }
 
-.php span::before{
-    content:"35%"
-}
-.php .percentage-bar{
-    width: 35%;
-}
+.php span::before{ content:"35%" }
+.php .percentage-bar{ width: 35%; }
 
-.solidity span::before{
-    content:"45%"
-}
-.solidity .percentage-bar{
-    width: 45%;
-}
+.solidity span::before{ content:"45%" }
+.solidity .percentage-bar{ width: 45%; }
 
 .skill h2{
     font-size:large;
@@ -332,6 +296,13 @@ h1{
 
 .tech-icon-very-big{
     font-size:60pt;
+}
+
+svg.ghost-orb-logo {
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-image: url("../images/ghost-logo-light.webp");
+    margin-top:2vh;
 }
 
 #logo-container{
