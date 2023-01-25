@@ -143,13 +143,11 @@ h1{
     background-color: var(--primary-highlight);
     clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
     margin:5vh;
-    /* border-radius: 50%; */
 }
 #photo-of-me{
     display:inline-block;
     width:200px;
     height:auto;
-    /* border-radius: 50%; */
     clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
 }
 
@@ -410,7 +408,7 @@ h1{
     }
 
     nav.open{
-        height:200px;
+        height:220px;
         background-color: var(--secondary-bg-color);
         z-index: 8;
         box-shadow: 0 5px 8px rgba(0, 0, 0, 0.3);
