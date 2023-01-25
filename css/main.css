@@ -307,8 +307,6 @@ svg.ghost-orb-logo {
 
 #logo-container{
     padding:35px 30px;
-    /* background: rgba(0, 0, 0, 0.8); */
-    /* linear-gradient:; */
     clip-path: polygon(0% 25%, 0% 75%, 50% 100%, 100% 75%, 100% 25%, 50% 0%);
     z-index: 0;
     justify-content: center;
@@ -323,9 +321,7 @@ svg.ghost-orb-logo {
 }
 
 ::-webkit-scrollbar-track {
-    /* -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); */
     border-radius: 10px;
-    
 }
 
 ::-webkit-scrollbar-thumb {
