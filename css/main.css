@@ -248,6 +248,10 @@ h1{
     display: flex;
 }
 
+/* .project-card:hover{
+    box-shadow: 0 5px 15px var(--primary-shadow);
+} */
+
 .left-project-card{
     flex-direction: row;
 }
@@ -321,7 +325,25 @@ svg.ghost-orb-logo {
 ::-webkit-scrollbar-corner {
   background: rgba(0,0,0,0);
 }
+@media screen and (max-width: 1200px){
+    .project-card{
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .project-card__image{
+        max-width: 400px;
+    }
 
+    .left-project-card{
+        flex-direction: column;
+    }
+    
+    .right-project-card{
+        flex-direction: column;
+    }
+}
 @media screen and (max-width: 900px){
 
     body{
@@ -415,25 +437,37 @@ svg.ghost-orb-logo {
         display: block;
     }
 
-    .project-card{
-        flex-direction: column;
-        flex-wrap: wrap;
+    .skill{
+        display:inline-block;
+        width:110px;
+        height:auto;
+    }
+
+    .skill img{
+        height:30px;
+    }
+
+    .tech-icon-big{
+        font-size:40pt;
+    }
+
+    .skill figcaption{
+        font-size:10pt;
     }
 
     .project-card__image{
         max-width: 300px;
     }
-
-    .left-project-card{
-        flex-direction: column;
-    }
-    
-    .right-project-card{
-        flex-direction: column;
-    }
 }
 
 @media screen and (max-width: 650px){
+
+    
+
+    .project-card__image{
+        max-width: 250px;
+    }
+
     .about-section{
         flex-direction: column;
     }
