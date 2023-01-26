@@ -134,11 +134,15 @@ h1{
     display: inline-block;
     font-size: large;
     color: aliceblue;
+    background-color: var(--secondary-bg-color);
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    width:20%;
 }
 
 .terminal-launch-link:hover{
     color:chartreuse;
     cursor:pointer;
+    box-shadow: 0 5px 15px var(--primary-shadow);
 }
 
 .bio{
