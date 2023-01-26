@@ -1,0 +1,75 @@
+.section-title {
+    margin-top: 0px;
+  }
+  
+  p {
+    font-size: calc(18px + 0.1vw);
+    color: #FFFFFF;
+    line-height: 1.5;
+  
+    @media only screen and (max-width: 1100px) {
+      font-size: calc(16px + 0.1vw);
+    }
+  }
+  
+  h3 {
+    color: #526C86;
+    font-size: calc(20px + 0.1vw);
+    font-weight: 500;
+    margin-top: 55px;
+  
+    @media only screen and (max-width: 800px) {
+      margin-top: 35px;
+    }
+  }
+  
+  .skills {
+    flex-wrap: wrap;
+  }
+  
+  .skill-item {
+    max-width: 25%;
+    width: auto;
+  
+    @media only screen and (max-width: 900px) {
+      max-width: 33.333%;
+    }
+  
+    &__inner {
+      background: #0d1d2e;
+  
+      i {
+        font-size: 50px;
+  
+        @media only screen and (max-width: 800px) {
+          font-size: 40px;
+        }
+      }
+    }
+  }
+  
+  .column-wrapper {
+  
+    .column {
+      position: relative;
+    }
+  }
+  
+  .project-image {
+    position: absolute;
+    width: 100%;
+    width: 50vw;
+    max-width: 715px;
+    height: 100%;
+    background-size: cover;
+    border-radius: 10px;
+  
+    @media only screen and (max-width: 800px) {
+      position: relative;
+      padding-bottom: 60%;
+      height: auto;
+      width: 100%;
+      margin-top: 35px;
+    }
+  }
+  

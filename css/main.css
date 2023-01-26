@@ -121,7 +121,8 @@ h1{
 .section__inner{
     color:var(--primary-color);
     z-index: 2;
-    padding: 10px 150px 100px 150px;
+    padding: 10px 50px 100px 50px;
+    
 }
 
 .section{
@@ -216,12 +217,64 @@ h1{
     display:inline-block;
     width:140px;
     height:130px;
+}
+
+.card{
     text-align: center;
     /* border-radius: 8px; */
     background-color: var(--secondary-bg-color);
     box-shadow: 0 3px 10px var(--primary-shadow);
     margin:2vh;
     padding:2vh;
+}
+.small-skill-cards-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding:20px 0px;
+}
+.small-skill-card{
+    text-align: center;
+    display: block;
+    background-color: var(--nav-bg-color);
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    width:60px;
+    height: 60px;
+    margin:5px;
+    padding:10px;
+}
+
+.project-card{
+    display: flex;
+}
+
+.left-project-card{
+    flex-direction: row;
+}
+
+.right-project-card{
+    flex-direction: row-reverse;
+}
+
+.project-card__description-container{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 20px;
+    text-align: left;
+}
+
+.project-card__description{
+    
+}
+
+.project-card__image{
+    max-width: 500px;
+    outline: 1px solid var(--primary-shadow);
+}
+
+.project-card__title{
+    
 }
 
 .skill:hover{
@@ -237,7 +290,8 @@ h1{
 }
 
 .tech-icon-small{
-    font-size:40pt;
+    font-size:30pt;
+    height:40px;
 }
 .tech-icon-medium{
     font-size:45pt;
@@ -280,7 +334,7 @@ svg.ghost-orb-logo {
         width:120px;
     }
     .section__inner{
-        padding: 0 100px;
+        padding: 0px;
     }
 
     .section__inner{
@@ -359,6 +413,24 @@ svg.ghost-orb-logo {
 
     .burger-menu {
         display: block;
+    }
+
+    .project-card{
+        flex-direction: column;
+        flex-wrap: wrap;
+        
+    }
+
+    .project-card__image{
+        max-width: 300px;
+    }
+
+    .left-project-card{
+        flex-direction: column;
+    }
+    
+    .right-project-card{
+        flex-direction: column;
     }
 }
 
