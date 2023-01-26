@@ -103,3 +103,34 @@
     border-radius: 6px;
     width:90%;
   }
+
+  :root{
+    --console-window-background:rgba(0, 0, 0, 0.8);
+    --terminal-font-size:10pt;
+    --terminal-font-color:rgb(94, 255, 53);
+    --terminal-font-family: Inconsolata, monospace;
+  }
+  .wb-header{
+      background: var(--console-window-background) !important;
+  }
+
+  .wb-title{
+      font-size: 9pt;
+  }
+
+  .winbox{
+      background-color:var(--winbox-background) blur(10%) !important;
+      container-type: inline-size;
+      font-family: var(--terminal-font-family);
+  }
+
+  .wb-body{
+      background: var(--console-window-background) !important;
+  }
+
+
+  @media screen and (min-width : 320px) and (max-width : 500px){
+      .winbox{
+          max-width:100%;
+        }
+  }

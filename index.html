@@ -9,11 +9,13 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="css/terminal.css">
     <link rel="stylesheet" href="css/main.css">
-    
     <script
         src="https://code.jquery.com/jquery-3.6.3.slim.min.js"
         integrity="sha256-ZwqZIVdD3iXNyGHbSYdsmWP//UBokj2FHAxKuSBKDSo="
         crossorigin="anonymous"></script>
+    <script src="https://rawcdn.githack.com/nextapps-de/winbox/0.2.6/dist/winbox.bundle.min.js"></script>
+    <script src="./js/terminal/filesystem.bundle.js"></script>
+    <script src="./js/terminal/terminal.js"></script>
     <script defer src="js/app.js"></script>
 </head>
 <body>
@@ -184,7 +186,27 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-card card right-project-card">
+                    <div class="project-card card right-project-card ">
+                        <img src="./images/terminal.jpg" alt="" class="project-card__image">
+                        <div class="project-card__description-container">
+                            <h3 class="project-card__title">jQuery Terminal Emulator</h3>
+                            <small class="project-card__description">I designed a simple, yet powerful terminal emulator using jQuery. <div class="try-terminal"></div></small>
+                            <div class="small-skill-cards-container">
+                                <div title="jQuery" class="small-skill-card">
+                                    <i class="devicon-jquery-plain tech-icon-small"></i>
+                                </div>
+                                
+                            </div>
+                            <div id="main-container"></div><div id="page-anchor"></div>
+                            <div class="project-card__links-container">
+                                <a href="https://github.com/gultar/tundraos" class="project-card__link project-card__github-link">
+                                    <i class="devicon-github-original"></i>
+                                </a>
+                            </div>
+                            <a onclick="makeTerminalWindow()" class="terminal-launch-link"><b><span>Try it out!</span></b></a>
+                        </div>
+                    </div>
+                    <div class="project-card card left-project-card">
                         <img src="./images/p2p-chat.jpg" alt="" class="project-card__image">
                         <div class="project-card__description-container">
                             <h3 class="project-card__title">P2P Chat application with Socket.io</h3>
@@ -210,7 +232,7 @@
                         
                         
                     </div>
-                    <div class="project-card card left-project-card">
+                    <div class="project-card card right-project-card">
                         
                         <img src="./images/arianesthread.png" alt="" class="project-card__image">
                         <div class="project-card__description-container">
@@ -239,7 +261,7 @@
                         </div>
                         
                     </div>
-                    <div class="project-card card right-project-card">
+                    <div class="project-card card left-project-card">
                         <img src="./images/dulactranslationservices.jpg" alt="" class="project-card__image">
                         <div class="project-card__description-container">
                             <h3 class="project-card__title">Dulac Translation Services</h3>

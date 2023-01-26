@@ -129,6 +129,17 @@ h1{
     min-height: 600px;
 }
 
+.terminal-launch-link{
+    padding:2px;
+    display: inline-block;
+    font-size: large;
+    color: aliceblue;
+}
+
+.terminal-launch-link:hover{
+    color:chartreuse;
+    cursor:pointer;
+}
 
 .bio{
     /* outline: 1px solid black; */
@@ -331,7 +342,7 @@ svg.ghost-orb-logo {
         flex-wrap: wrap;
         align-items: center;
     }
-    
+
     .project-card__image{
         max-width: 400px;
     }

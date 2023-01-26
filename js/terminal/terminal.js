@@ -19,7 +19,7 @@ class Terminal{
     this.isDoubleTab = false
     this.listPossibilities = false
     this.helpMsgs = {
-      "system":{
+      "commands":{
         "help":"Displays this message",
         "clear":"Clears the console",
         "date":"Displays the current date",
@@ -37,42 +37,7 @@ class Terminal{
         "rmdir":"Remove the DIRECTORY, if it is empty. Usage: rmdir directoryname",
         "whoami":"Displays information concerning host",
         "whereis":"Search for possible paths for a file or directory name",
-        "reboot":"Reboots/refreshes system",
-        "logout":"Closes the current user's session",
-        "shutdown":"Shuts down system",
       },
-      "effect":{
-          "Possible Commands":"effect particles/wave/halo",
-          "effect wave":"Toggles a background color wave effect. Colors are set in variables.css",
-          "effect halo":"Toggles a colored halo around cursor. Usage: effect halo 300 - Default is 200 (px)",
-          "effect particles":"Toggles javascript particles effect in background.",
-      },
-      "settings":{
-        "background":"Changes the background image. Usage: background http://url.url",
-      },
-      "applications":{
-        "browser":"Launches a simple Web browser",
-        "web":"*An alias of browser*",
-        "wiki":"Opens up a wikipedia page, or another website (not all of them work)",
-        "gdt":"Opens up the Grand dictionnaire terminologique",
-        "linguee":"Searches on Linguee for a translation of the text provided",
-        "map":"Displays a Google Maps window",
-        "tirex":"Start the famous tirex game from Google",
-        "lofi":"Opens up Lo Fi Girl's Youtube channel",
-        "webamp":"Launches a Webamp Music Player window",
-        "editor":"Launches a code editor window",
-        "markdown":"Launches a markdown file editor window",
-        "text":"Launches a rich text editor window",
-        "view":"Opens a simple image viewer",
-        "weather":"Displays local weather information",
-        "explorer":"Launches a file explorer window at selected path. Usage: explorer path/",
-      },
-      "wifi":{
-        "Possible Commands":"wifi scan/list/connect/disconnect",
-        "wifi scan":"Scans for available wifi networks and returns them as objects",
-        "wifi list":"Lists active wifi connections",
-        "wifi connect":"Connects to network. Usage: wifi connect --ssid 'NetworkName' --password 'psswrd123' "
-      }
     };
 
     this.commands = {
@@ -92,34 +57,7 @@ class Terminal{
       rmdir:async(args)=>await this.runBash("rmdir",args),
       rm:async(args)=>await this.runBash("rm",args),
       whereis:async(args)=>await this.runBash("whereis", args),
-      '#':(args)=>this.runRoot(args),
-      reboot:()=>this.reboot(),
-      shutdown:()=>this.shutdown(),
-      logout:()=>logout(),
-      //Settings
-      background:(args)=>changeBackground(args),
-      effect:(args)=>this.setEffect(args),
-      //Applications
-      web:(args)=>this.startBrowser(args),
-      browser:(args)=>this.startBrowser(args),
-      wiki:()=>new Browser("https://wikipedia.org"),
-      gdt:()=>new Browser("https://gdt.oqlf.gouv.qc.ca/"),
-      iching:()=>new Browser("https://gultar.github.io/iching/"),//
-      georatio:()=>new Browser("https://georatio.com/"),
-      linguee:(args)=>runLinguee(args),
-      tirex:()=>runTirex(),
-      map:()=>runMap(),
-      lofi:()=>runLofi(),
-      editor:async (args)=>await this.runEditor(args), //Alias
-      markdown:(args)=>this.runMarkdownEditor(args),
-      text:(args)=>this.runRichTextEditor(args),
-      weather:async()=>await this.getWeather(),
       whoami:()=>this.whoami(),
-      view:async (args)=>await this.viewImage(args),
-      test:async(args)=>await this.testSomething(args),
-      explorer:async(args)=>await this.runExplorer(args),
-      wifi:async(args)=>await this.makeWifiCommand(args),
-      hyperwatch:()=>this.enableHyperwatch()
     }
   }
   
@@ -130,7 +68,8 @@ class Terminal{
   }
 
   async exec(cmd, args){
-    return await exec(cmd, args, this.directoryPointerId)
+    console.log('Exec is ok')
+    return await window.exec(cmd, args, this.directoryPointerId)
   }
 
   setPromptDecoration(decoration=`[${window.username}@sh]`){

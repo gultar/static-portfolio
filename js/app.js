@@ -1,3 +1,5 @@
+
+
 const showSectionsOfScroll = () =>{
     const observer = new IntersectionObserver((entries)=>{
         entries.forEach(entry =>{
@@ -39,6 +41,51 @@ const toggleBurgerMenu = ()=>{
         })
     });
 }
+
+const runFileSystemCommand = (cmd, args=[]) =>{
+    try{
+        console.log('Okay')
+      const commandResult = window.FileSystem[cmd](...args)
+      return commandResult
+    }catch(e){
+      console.log(e)
+      return { error:e.message }
+    }
+}
+
+const exec = async (cmd, args=[], pointerId) =>{
+    return runFileSystemCommand(cmd, [...args])
+}
+
+
+const makeTerminalWindow = async () =>{
+    const domElement = `
+    <div id="terminal-window-1" class="terminal-window" style="">
+      <div id="container-1" class="container">
+              <output id="output-1" class="output">
+              </output>
+              <div action="#" id="input-line-1" class="input-line">
+                  <div id="prompt-1" class="prompt">
+                  </div>
+                  <div>
+                    <input tabindex="0" id="cmdline-1" class="cmdline" autofocus />
+                  </div>
+              </div>
+      </div>
+    </div>
+    `
+
+    const termContainer = document.querySelector("#main-container")
+    termContainer.innerHTML = domElement
+    const win = new WinBox({ mount:termContainer, onclose:()=>{
+        termContainer.innerHTML = ""
+    } })
+    const terminal = new Terminal("1","1")
+    terminal.init()
+}
+
+
+window.exec = exec
 
 showSectionsOfScroll()
 toggleBurgerMenu()
