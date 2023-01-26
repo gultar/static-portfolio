@@ -129,6 +129,7 @@ h1{
     min-height: 600px;
 }
 
+
 .bio{
     /* outline: 1px solid black; */
 }
@@ -327,11 +328,15 @@ svg.ghost-orb-logo {
         max-width: 900px;
     }
     
+    .about-section__inner{
+        
+    }
+    
     #photo-of-me{
         width:120px;
     }
     .section__inner{
-        padding: 0px;
+        padding:0px 20px;
     }
 
     .section__inner{
