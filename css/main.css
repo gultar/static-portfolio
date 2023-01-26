@@ -31,7 +31,6 @@ body{
     width:100%;
     height:100%;
     overflow: overlay;
-    
 }
 
 .wrapper{
@@ -265,28 +264,22 @@ h1{
 }
 
 .project-card__description{
-    
+    font-weight: 600;
 }
-
 .project-card__image{
     max-width: 500px;
     outline: 1px solid var(--primary-shadow);
 }
 
-.project-card__title{
-    
-}
-
-.skill:hover{
-    /* box-shadow: 0 10px 20px var(--primary-shadow); */
-}
-
-#projects{
-    /* background-color: transparent !important; */
+.project-card__link{
+    font-size: 20pt;
+    color: var(--primary-color);
+    text-decoration: none;
 }
 
 .skill h2{
     font-size:large;
+    
 }
 
 .tech-icon-small{
@@ -329,6 +322,10 @@ svg.ghost-orb-logo {
 }
 
 @media screen and (max-width: 900px){
+
+    body{
+        max-width: 900px;
+    }
     
     #photo-of-me{
         width:120px;
@@ -343,8 +340,6 @@ svg.ghost-orb-logo {
     }
     
     .section{
-        /* background-color: #404347; */
-        /* width:auto; */
         padding-top:100px;
         width:100%;
     }
@@ -418,7 +413,6 @@ svg.ghost-orb-logo {
     .project-card{
         flex-direction: column;
         flex-wrap: wrap;
-        
     }
 
     .project-card__image{
