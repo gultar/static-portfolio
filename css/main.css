@@ -195,8 +195,8 @@ h1{
     padding:4px;
     display: inline-block;
     font-size: large;
-    color: aliceblue;
-    background-color: var(--secondary-bg-color);
+    color: var(--primary-color);
+    background-color: var(--nav-bg-color);
     box-shadow: 0 3px 10px var(--primary-shadow);
     text-align: center;
     margin: auto 0;
