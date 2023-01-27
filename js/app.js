@@ -85,6 +85,12 @@ const makeTerminalWindow = async () =>{
 }
 
 
+const toggleDarkMode = () =>{
+    const body = document.body
+    body.classList.toggle("dark-mode")
+}
+
+window.toggleDarkMode = toggleDarkMode
 window.exec = exec
 
 showSectionsOfScroll()

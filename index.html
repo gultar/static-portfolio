@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="css/terminal.css">
     <link rel="stylesheet" href="css/main.css">
@@ -39,7 +39,16 @@
                 <div class="nav-links__item">
                     <a href="#contact" class="nav-links__link">Contact</a>
                 </div>
+                <div class="dark-mode-toggle nav-links__item nav-links__link">
+                    <input  type="checkbox" class="checkbox " id="checkbox">
+                    <label onclick="toggleDarkMode()" for="checkbox" class="label ">
+                        <i class="fas fa-moon"></i>
+                        <i class='fas fa-sun'></i>
+                        <div class='ball'>
+                    </label>
+                </div>
             </div>
+
         </nav>
 
         <div id="home" class="central-column">
