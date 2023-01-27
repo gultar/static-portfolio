@@ -508,12 +508,13 @@ svg.ghost-orb-logo {
     }
     
     .nav-links__item{
-        border-bottom: 1px solid var(--secondary-bg-color);
+        /* border-bottom: 1px solid var(--secondary-bg-color); */
+        outline: 1px solid var(--secondary-bg-color);
     }
 
     .burger-menu{
         position: fixed;
-        top:10px;
+        top:30px;
         right:50px;
         z-index: 15;
         color: var(--primary-color);
