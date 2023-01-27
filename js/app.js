@@ -81,7 +81,6 @@ const makeTerminalWindow = async () =>{
         mount:termContainer,
         x: "center",
         y: "center",
-        height:"500",
         width:"400",
         onclose:()=>{
             termContainer.innerHTML = ""
