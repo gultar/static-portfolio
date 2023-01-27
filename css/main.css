@@ -192,13 +192,14 @@ h1{
 }
 
 .terminal-launch-link{
-    padding:2px;
+    padding:4px;
     display: inline-block;
     font-size: large;
     color: aliceblue;
     background-color: var(--secondary-bg-color);
     box-shadow: 0 3px 10px var(--primary-shadow);
-    width:20%;
+    text-align: center;
+    margin: auto 0;
 }
 
 .terminal-launch-link:hover{
@@ -327,9 +328,6 @@ h1{
     display: flex;
 }
 
-/* .project-card:hover{
-    box-shadow: 0 5px 15px var(--primary-shadow);
-} */
 
 .left-project-card{
     flex-direction: row;
@@ -355,10 +353,17 @@ h1{
     outline: 1px solid var(--primary-shadow);
 }
 
+.project-card__links-container{
+    display: flex;
+    width: 100%;
+    flex-direction: row-reverse;
+}
+
 .project-card__link{
     font-size: 20pt;
     color: var(--primary-color);
     text-decoration: none;
+    padding:10px;
 }
 
 .skill h2{
