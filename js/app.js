@@ -81,7 +81,7 @@ const makeTerminalWindow = async () =>{
         mount:termContainer,
         x: "center",
         y: "center",
-        width:"400",
+        width:"500",
         onclose:()=>{
             termContainer.innerHTML = ""
         } 
@@ -93,7 +93,14 @@ const makeTerminalWindow = async () =>{
 
 const toggleDarkMode = () =>{
     const body = document.body
+    const ghostIcon = document.querySelector("#ghost-icon")
     body.classList.toggle("dark-mode")
+    
+    if(ghostIcon.src.includes("dark")){
+        ghostIcon.src = ghostIcon.src.replace("dark","light")
+    }else{
+        ghostIcon.src = ghostIcon.src.replace("light","dark")
+    }
 }
 
 window.toggleDarkMode = toggleDarkMode

@@ -18,7 +18,7 @@
     <script src="./js/terminal/terminal.js"></script>
     <script defer src="js/app.js"></script>
 </head>
-<body>
+<body class="dark-mode">
     
     <div class="wrapper">
 
@@ -42,8 +42,8 @@
                 <div class="dark-mode-toggle nav-links__item">
                     <input  type="checkbox" class="checkbox " id="checkbox">
                     <label onclick="toggleDarkMode()" for="checkbox" class="label nav-links__link">
-                        <i class="fas fa-moon"></i>
                         <i class='fas fa-sun'></i>
+                        <i class="fas fa-moon"></i>
                         <div class='ball'>
                     </label>
                 </div>
@@ -78,20 +78,21 @@
                             </div>
                             <div class="info-subsection">
                                 <ul class="info-block technical-info">
-                                    <li class="info-field"><span class="info-field__label">Age: </span><small>30</small></li>
-                                    <li class="info-field"><span class="info-field__label">Height: </span><small>5' 10''</small></li>
-                                    <li class="info-field"><span class="info-field__label">Hobbies: </span><small>Coding, Jogging, Archery, Exploring, BJJ</small></li>
-                                    <li class="info-field"><span class="info-field__label">Fluent in: </span><small>French, English, Spanish, Sarcasm</small></li>
-                                    <li class="info-field"><span class="info-field__label">Conversational in: </span><small>Moroccan Arabic</small></li>
-                                    <li class="info-field"><span class="info-field__label">Basic level in: </span><small>Russian, Portuguese</small></li>
-                                </ul>
-
-                                <ul class="info-block personal-info">
-                                    <li class="info-field"><span class="info-field__label">Operating systems: </span><small> Elementary OS, Ubuntu, Windows 10</small></li>
-                                    <li class="info-field"><span class="info-field__label">Editors: </span><small> VS Code, Bootleg Ace, Nano</small></li>
+                                    <li class="info-field"><span class="info-field__label">Operating systems: </span><small>Elementary OS, Ubuntu, Windows 10</small></li>
+                                    <li class="info-field"><span class="info-field__label">Editors: </span><small>VS Code, Bootleg Ace, Nano</small></li>
+                                    <li class="info-field"><span class="info-field__label">Programming Languages:</span><small>HTML5/CSS3, JS, Typescript, Solidity, PHP, MySQL, Sass</small></li>
                                     <li class="info-field"><span class="info-field__label">Tools: </span><small>Git, PHPMyAdmin, MySQL Workbench</small></li>
                                     <li class="info-field"><span class="info-field__label">Frameworks: </span><small>Fresh, Wordpress, Ghost CMS</small></li>
                                     <li class="info-field"><span class="info-field__label"></span><small></small></li>
+                                </ul>
+
+                                <ul class="info-block personal-info">
+                                    <li class="info-field"><span class="info-field__label">Age: </span><small>30</small></li>
+                                    <li class="info-field"><span class="info-field__label">Height: </span><small>5' 10''</small></li>
+                                    <li class="info-field"><span class="info-field__label">Hobbies: </span><small>Coding, Jogging, Archery, Exploring, BJJ, Watercolor</small></li>
+                                    <li class="info-field"><span class="info-field__label">Fluent in: </span><small>French, English, Spanish</small></li>
+                                    <li class="info-field"><span class="info-field__label">Conversational in: </span><small>Moroccan Arabic</small></li>
+                                    <li class="info-field"><span class="info-field__label">Basic level in: </span><small>Russian, Portuguese</small></li>
                                     <li class="info-field"><span class="info-field__label"></span><small></small></li>
                                 </ul>
                             </div>
@@ -103,7 +104,7 @@
             <div id="skills" class="section">
                <div class="hidden section__inner">
                  <!-- Skills -->
-                 <h1>The Tools I use</h1>
+                 <h1>The tools I use</h1>
                  <div class="skills">
                      
                      <div class="skill card">
@@ -154,7 +155,7 @@
                      </div>
                      <div class="skill card">
                         <h2> 
-                            <img style="margin-top:15%" height="40px" class="tech-icon-big" src="./images/ghost-logo-dark.png" alt="" srcset="">
+                            <img id="ghost-icon" style="margin-top:15%;" height="40px" class="tech-icon-big" src="./images/ghost-logo-dark.png" alt="" srcset="">
                             
                         </h2>
                      </div>
@@ -174,7 +175,7 @@
                 <div class="hidden section__inner">
                         <!-- Contact -->
                     <h1>Projects</h1>
-                    <div class="project-card card left-project-card">
+                    <div class="project-card left-project-card">
                         <img src="./images/tundraos.jpg" alt="" class="project-card__image">
                         <div class="project-card__description-container">
                             <h3 class="project-card__title">Tundra OS - A Desktop Environment using Electron</h3>
@@ -198,54 +199,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-card card right-project-card ">
-                        <img src="./images/terminal.jpg" alt="" class="project-card__image">
-                        <div class="project-card__description-container">
-                            <h3 class="project-card__title">jQuery Terminal Emulator</h3>
-                            <small class="project-card__description">I designed a simple, yet powerful terminal emulator using jQuery. <div class="try-terminal"></div></small>
-                            <div class="small-skill-cards-container">
-                                <div title="jQuery" class="small-skill-card">
-                                    <i class="devicon-jquery-plain tech-icon-small"></i>
-                                </div>
-                                
-                            </div>
-                            <div id="main-container"></div><div id="page-anchor"></div>
-                            <div class="project-card__links-container">
-                                <a href="https://github.com/gultar/tundraos" class="project-card__link project-card__github-link">
-                                    <i class="devicon-github-original"></i>
-                                </a>
-                                <a onclick="makeTerminalWindow()" class="terminal-launch-link"><b><span>Try it out!</span></b></a>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <div class="project-card card left-project-card">
-                        <img src="./images/p2p-chat.jpg" alt="" class="project-card__image">
-                        <div class="project-card__description-container">
-                            <h3 class="project-card__title">P2P Chat application with Socket.io</h3>
-                            <small class="project-card__description">I loved trying to wrap my head around p2p dynamics and how to handle message passing. To do so, I built a P2P chat which enables two nodes to chat, using BitTorrent's Discovery Network</small>
-                            <div class="small-skill-cards-container">
-                                <div title="Node JS" class="small-skill-card">
-                                    <i class="devicon-nodejs-plain tech-icon-small"></i>
-                                </div>
-                                <div title="React" class="small-skill-card">
-                                    <i class="devicon-react-original tech-icon-small"></i>
-                                </div>
-                                <div title="Socket.IO" class="small-skill-card">
-                                    <i class="devicon-socketio-original tech-icon-small"></i>
-                                </div>
-                                
-                            </div>
-                            <div class="project-card__links-container">
-                                <a href="https://github.com/gultar/p2p-chatroom" class="project-card__link project-card__github-link">
-                                    <i class="devicon-github-original"></i>
-                                </a>
-                            </div>
-                        </div>
-                        
-                        
-                    </div>
-                    <div class="project-card card right-project-card">
+                    <div class="project-card right-project-card">
                         
                         <img src="./images/arianesthread.png" alt="" class="project-card__image">
                         <div class="project-card__description-container">
@@ -272,9 +226,56 @@
                                 </a>
                             </div>
                         </div>
+                    </div>
+                    <div class="project-card left-project-card">
+                        <img src="./images/terminal.jpg" alt="" class="project-card__image">
+                        <div class="project-card__description-container">
+                            <h3 class="project-card__title">jQuery Terminal Emulator</h3>
+                            <small class="project-card__description">I designed a simple, yet powerful terminal emulator using jQuery. <div class="try-terminal"></div></small>
+                            <div class="small-skill-cards-container">
+                                <div title="jQuery" class="small-skill-card">
+                                    <i class="devicon-jquery-plain tech-icon-small"></i>
+                                </div>
+                                
+                            </div>
+                            <div id="main-container"></div><div id="page-anchor"></div>
+                            <div class="project-card__links-container">
+                                <a href="https://github.com/gultar/tundraos" class="project-card__link project-card__github-link">
+                                    <i class="devicon-github-original"></i>
+                                </a>
+                                <a onclick="makeTerminalWindow()" class="terminal-launch-link"><b><span>Try it out!</span></b></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="project-card right-project-card ">
+                        <img src="./images/p2p-chat.jpg" alt="" class="project-card__image">
+                        <div class="project-card__description-container">
+                            <h3 class="project-card__title">P2P Chat application with Socket.io</h3>
+                            <small class="project-card__description">I loved trying to wrap my head around p2p dynamics and how to handle message passing. To do so, I built a P2P chat which enables two nodes to chat, using BitTorrent's Discovery Network</small>
+                            <div class="small-skill-cards-container">
+                                <div title="Node JS" class="small-skill-card">
+                                    <i class="devicon-nodejs-plain tech-icon-small"></i>
+                                </div>
+                                <div title="React" class="small-skill-card">
+                                    <i class="devicon-react-original tech-icon-small"></i>
+                                </div>
+                                <div title="Socket.IO" class="small-skill-card">
+                                    <i class="devicon-socketio-original tech-icon-small"></i>
+                                </div>
+                                
+                            </div>
+                            <div class="project-card__links-container">
+                                <a href="https://github.com/gultar/p2p-chatroom" class="project-card__link project-card__github-link">
+                                    <i class="devicon-github-original"></i>
+                                </a>
+                            </div>
+                        </div>
+                        
                         
                     </div>
-                    <div class="project-card card left-project-card">
+
+                    <div class="project-card left-project-card">
                         <img src="./images/dulactranslationservices.jpg" alt="" class="project-card__image">
                         <div class="project-card__description-container">
                             <h3 class="project-card__title">Dulac Translation Services</h3>
@@ -294,7 +295,7 @@
                             </div>
                             <div class="project-card__links-container">
                                 <a href="http://dulactranslation.services/" class="project-card__link project-card__github-link">
-                                    <i class="devicon-github-original"></i>
+                                    <ion-icon name="planet-outline"></ion-icon>
                                 </a>
                             </div>
                         </div>
@@ -307,10 +308,18 @@
             <div id="contact" class="section">
                 <div class="hidden section__inner">
                         <!-- Contact -->
-                    <h1>To contact me</h1>
-                    <span>Phone: </span>
-                    <span>Email: </span>
-                    <span>Website: </span>
+                    <h1>How to contact me</h1>
+
+                    <div class="contact-info card">
+                        <b class="contact-info__contact-message">Can you easily contact me via email or through Whatsapp</b>
+                        <a class="contact-info__item" href="https://api.whatsapp.com/send?phone=529992165658"><ion-icon class="whatsapp-logo" name="logo-whatsapp"></ion-icon></a>
+                        <a class="contact-info__item" href="mailto:sacha-olivier.dulac@hotmail.com">sacha-olivier.dulac@hotmail.com</a>
+                        
+                        
+                    </div>
+                    
+                    
+                    
                 </div>
             </div>
         </div>

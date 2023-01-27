@@ -8,7 +8,7 @@
     --third-bg-color:#122a42;/*#0a1724;*/
     --image-filter:rgba(18,42, 66, 0.7);
     --primary-color:#000;/*#fff;*/
-    --primary-highlight:#122a42;
+    --primary-highlight:#183757;
     --secondary-highlight:#EBBC1C;
     --primary-shadow:rgb(7, 16, 26);
     --skill-entry-size:200px;
@@ -46,14 +46,6 @@ body{
     background-color: var(--bg-color);
     width:100%;
     height:100%;
-    
-    /* background-image: 
-        linear-gradient(to bottom, var(--image-filter), var(--image-filter)), url("../images/nightsky4.avif") !important;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed; */
-    
-    
 }
 
 .central-column{
@@ -188,7 +180,7 @@ h1{
 
 .section{
     width:auto;
-    min-height: 600px;
+    min-height: 200px;
 }
 
 .terminal-launch-link{
@@ -326,6 +318,12 @@ h1{
 
 .project-card{
     display: flex;
+    text-align: center;
+    /* border-radius: 8px; */
+    background-color: var(--secondary-bg-color);
+    box-shadow: 0 3px 10px var(--primary-shadow);
+    padding: 2px;
+    margin-bottom: 30px;
 }
 
 
@@ -391,6 +389,32 @@ svg.ghost-orb-logo {
     background-repeat: no-repeat;
     background-image: url("../images/ghost-logo-light.webp");
     margin-top:2vh;
+}
+
+.contact-info{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.contact-info__item{
+    padding:20px;
+    color:var(--primary-color);
+}
+
+.contact-info__contact-message{
+
+}
+
+.whatsapp-logo{
+    font-size: 30pt;
+    
+}
+
+.contact-info__item:hover{
+    color:green;
+    transition: 0.2s color;
 }
 
 ::-webkit-scrollbar {
@@ -482,6 +506,10 @@ svg.ghost-orb-logo {
         background-color: var(--nav-bg-color);
         box-shadow: 0 1px 2px var(--primary-shadow);
     }
+    
+    .nav-links__item{
+        border-bottom: 1px solid var(--secondary-bg-color);
+    }
 
     .burger-menu{
         position: fixed;
@@ -496,9 +524,6 @@ svg.ghost-orb-logo {
     }
 
     .dark-mode-toggle{
-        /* position: fixed;
-        top:10px;
-        left:50px; */
         display: flex;
         width:100%;
         flex-direction: row;
@@ -567,16 +592,19 @@ svg.ghost-orb-logo {
     }
 
     .project-card__image{
-        max-width: 300px;
+        max-width: 450px;
+    }
+}
+
+@media screen and (max-width: 750px){
+    .project-card__image{
+        max-width: 400px;
     }
 }
 
 @media screen and (max-width: 650px){
-
-    
-
     .project-card__image{
-        max-width: 250px;
+        max-width: 300px;
     }
 
     .about-section{
