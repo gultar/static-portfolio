@@ -77,9 +77,14 @@ const makeTerminalWindow = async () =>{
 
     const termContainer = document.querySelector("#main-container")
     termContainer.innerHTML = domElement
-    const win = new WinBox({ mount:termContainer, onclose:()=>{
-        termContainer.innerHTML = ""
-    } })
+    const win = new WinBox({ 
+        mount:termContainer,
+        x: "center",
+        y: "center",
+        onclose:()=>{
+            termContainer.innerHTML = ""
+        } 
+    })
     const terminal = new Terminal("1","1")
     terminal.init()
 }
