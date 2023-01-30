@@ -391,6 +391,13 @@ svg.ghost-orb-logo {
     margin-top:2vh;
 }
 
+.ghost-small-icon-container{
+    height:42px;
+    width:42px;
+    overflow:hidden;
+    margin-top:0;
+}
+
 .contact-info{
     list-style: none;
     display: flex;
