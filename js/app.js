@@ -101,6 +101,16 @@ const toggleDarkMode = () =>{
     }else{
         ghostIcon.src = ghostIcon.src.replace("light","dark")
     }
+
+    const ghostSmallIcons = document.querySelectorAll(".ghost-small-icon")
+    ghostSmallIcons.forEach((ghostIcon) =>{
+        console.log(ghostSmallIcons)
+        if(ghostIcon.src.includes("dark")){
+            ghostIcon.src = ghostIcon.src.replace("dark","light")
+        }else{
+            ghostIcon.src = ghostIcon.src.replace("light","dark")
+        }
+    })
 }
 
 window.toggleDarkMode = toggleDarkMode
