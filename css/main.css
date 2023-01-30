@@ -231,13 +231,15 @@ h1{
 .info-field{
     line-height: 25px;
     font-size: 12pt;
+    overflow-wrap:break-word;
 }
 
 .info-field__label{
     font-size: 11pt;
     font-weight: bold;
     font-style: italic;
-    color:var(--primary-highlight)
+    color:var(--primary-highlight);
+    padding-right:5px;
 }
 
 #photo-of-me{
