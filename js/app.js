@@ -111,6 +111,23 @@ const toggleDarkMode = () =>{
             ghostIcon.src = ghostIcon.src.replace("light","dark")
         }
     })
+
+    const chatgptIcon = document.querySelector("#chatgpt-icon")
+    
+    if(chatgptIcon.src.includes("dark")){
+        chatgptIcon.src = chatgptIcon.src.replace("dark","light")
+    }else{
+        chatgptIcon.src = chatgptIcon.src.replace("light","dark")
+    }
+
+    // const chatgptSmallIcons = document.querySelectorAll(".-small-icon")
+    // chatgptSmallIcons.forEach((chatgptIcon) =>{
+    //     if(chatgptIcon.src.includes("dark")){
+    //         chatgptIcon.src = chatgptIcon.src.replace("dark","light")
+    //     }else{
+    //         chatgptIcon.src = chatgptIcon.src.replace("light","dark")
+    //     }
+    // })
 }
 
 window.toggleDarkMode = toggleDarkMode
